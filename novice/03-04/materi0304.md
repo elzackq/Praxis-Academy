@@ -11,9 +11,10 @@
     django-admin startproject <nama_projek>
 ```
 eg.
-    ```
+```
     django-admin startproject buku_catatan
-    ```
+```
+
 2. Masuk ke direktori project, jalankan perintah berikut
 ```
     python3 manage.py runserver
@@ -48,3 +49,6 @@ INSTALLED_APPS = [
     'kegiatan',
 ]
 ```
+
+## Mengaktifkan server
+1.
