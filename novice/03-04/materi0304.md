@@ -10,7 +10,7 @@
 ```
     django-admin startproject <nama_projek>
 ```
-    eg.
+eg.
     ```
         django-admin startproject buku_catatan
     ```
@@ -25,7 +25,7 @@
 ```
     python manage.py startapp <nama_applikasi>
 ```
-    Contoh:
+Contoh:
 ```
     python manage.py startapp kegiatan
 ```
@@ -36,7 +36,7 @@
 
     pada bagian ```INSTALLED_APPS```, tambahkan nama aplikasi yang ingin didaftarkan.
 
-    Contoh:
+Contoh:
     ```
     INSTALLED_APPS = [
         'django.contrib.admin',
