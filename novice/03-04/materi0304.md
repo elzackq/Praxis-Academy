@@ -10,7 +10,7 @@
 ```
     django-admin startproject <nama_projek>
 ```
-    eg.
+eg.
     ```
     django-admin startproject buku_catatan
     ```
