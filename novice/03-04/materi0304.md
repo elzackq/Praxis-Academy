@@ -11,9 +11,9 @@
     django-admin startproject <nama_projek>
 ```
 eg.
-    ```
-        django-admin startproject buku_catatan
-    ```
+```
+    django-admin startproject buku_catatan
+```
 
 2. Masuk ke direktori project, jalankan perintah berikut
 ```
@@ -37,6 +37,7 @@ Contoh:
     pada bagian ```INSTALLED_APPS```, tambahkan nama aplikasi yang ingin didaftarkan.
 
 Contoh:
+   
     ```
     INSTALLED_APPS = [
         'django.contrib.admin',
