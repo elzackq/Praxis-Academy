@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <div>            
+        <h2>Daftar nama tamu : </h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a href="/">Mbalik Nang Awal</a>
+        </div>
+        <div class="col-12 col-md-6 text-right">
+            <a href="/registrasi/tambah">
+                <button class="action-button">
+                    Tambah Tamu Baru
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for data in datum %}
+        <div class="col-6 col-md-4 p-3">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                            <a href="{{ data.id }}">
+                                <h3 style="display: inline;">{{ data.nama }}</h3>
+                            </a>
+                            <a href="javascript:void(0)" style="color: red; text-decoration: none;" onclick="hapus({{ data.id }})">x</a>
+                            <p>{{ data.alamat }}</p>
+                            <p>{{ data.tlp }}</p>
+                            <p>{{ data.keperluan }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+
+{% endblock %}
