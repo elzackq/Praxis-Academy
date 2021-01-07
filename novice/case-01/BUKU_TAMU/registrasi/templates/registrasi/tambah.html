@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buku Tamu</title>
+</head>
+<body>
+    <a href="/registrasi">Kembali</a>
+    <h1>Input Nama Tamu : </h1>
+    <form action="/registrasi/simpanbaru" method="post">
+        {% csrf_token %}
+        <input type="text" name="nama" placeholder="Nama"/>
+        <input type="text" name="alamat" placeholder="Alamat"/>
+        <input type="text" name="tlp" placeholder="No Telepon"/>
+        <input type="text" name="keperluan" placeholder="Keperluan"/>
+
+        <br/>
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>

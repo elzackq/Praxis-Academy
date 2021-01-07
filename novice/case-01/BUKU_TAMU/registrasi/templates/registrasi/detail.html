@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<a href="/registrasi">
+    <button class="action-button">
+        Kembali
+    </button>
+</a>
+<h3>{{ registrasi.nama }}</h3>
+<p>{{ registrasi.alamat }}</p>
+<p>{{ registrasi.tlp }}</p>
+<p>{{ registrasi.keperluan }}</p>
+
+
+{% endblock %}
