@@ -1,23 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buku Tamu</title>
-</head>
-<body>
-    <a href="/registrasi">Kembali</a>
-    <h1>Input Nama Tamu : </h1>
-    <form action="/registrasi/simpanbaru" method="post">
-        {% csrf_token %}
-        <input type="text" name="nama" placeholder="Nama"/>
-        <input type="text" name="alamat" placeholder="Alamat"/>
-        <input type="text" name="tlp" placeholder="No Telepon"/>
-        <input type="text" name="keperluan" placeholder="Keperluan"/>
+{% extends 'layout.html' %}
 
-        <br/>
-        <button type="submit">Simpan</button>
-    </form>
-</body>
-</html>
+{% block content %}
+
+<a href="/registrasi">Kembali</a>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3 class="text-center mb-6 mt-6">Input Nama Tamu : </h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <form action="/registrasi/simpanbaru" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" name="nama" placeholder="Nama"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="alamat" placeholder="Alamat"/>  
+                </div>
+                <div class="form-group">
+                    <input type="text" name="tlp" placeholder="No Telepon"/>    
+                </div>
+                <div class="form-group">
+                    <textarea type="text" name="keperluan" placeholder="Keperluan"/></textarea>  
+                    <hr>
+                </div>
+                <div class="form-group">
+                    <br/>
+                    <button type="submit" class=" btn btn-success">Simpan</button>   
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -5,19 +5,22 @@
     <div>            
         <h2>Daftar nama tamu : </h2>
     </div>
-    <div class="row">
-        <div class="col">
-            <a href="/">Mbalik Nang Awal</a>
-        </div>
-        <div class="col-12 col-md-6 text-right">
-            <a href="/registrasi/tambah">
-                <button class="action-button">
-                    Tambah Tamu Baru
+        <div class="row">
+            <div class="col">
+                <a href="/">
+                <button class="btn btn-info">
+                    Mbalik Nang Awal
                 </button>
-            </a>
+                </a>
+            </div>
+            <div class="col-6 col-md-6 text-right">
+                <a href="/registrasi/tambah ">
+                    <button class="btn btn-success">
+                        Tambah Tamu Baru
+                    </button>
+                </a>
+            </div>    
         </div>
-    </div>
-
     <div class="row">
         {% for data in datum %}
         <div class="col-6 col-md-4 p-3">
@@ -28,12 +31,22 @@
                             <a href="{{ data.id }}">
                                 <h3 style="display: inline;">{{ data.nama }}</h3>
                             </a>
-                            <a href="javascript:void(0)" style="color: red; text-decoration: none;" onclick="hapus({{ data.id }})">x</a>
-                            <p>{{ data.alamat }}</p>
-                            <p>{{ data.tlp }}</p>
-                            <p>{{ data.keperluan }}</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <a href="javascript:void(0)" style="color: red; text-decoration: none;" onclick="hapus({{ data.id }})">
+                                <i class="bi bi-basket">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                                        <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                                    </svg>
+                                </i>
+                            </a>
                         </div>
                     </div>
+                </div>
+                <div class="card-body">
+                    <p>{{ data.alamat }}</p>
+                    <p>{{ data.tlp }}</p>
+                    <p>{{ data.keperluan }}</p>
                 </div>
             </div>
         </div>
