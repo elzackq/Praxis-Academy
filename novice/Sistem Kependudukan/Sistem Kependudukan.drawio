@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2021-01-11T03:43:35.526Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.284" etag="bzArorAr-ITJfjU7KQQM" version="14.1.8" type="github">
-  <diagram id="4BI-9e6mrWdRKIqYOh0C" name="Page-1">
+<mxfile host="app.diagrams.net" modified="2021-01-11T07:32:54.830Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.284" etag="ZkQQtfKxuLyN_JLZin_b" version="14.1.8" type="github" pages="3">
+  <diagram id="4BI-9e6mrWdRKIqYOh0C" name="Tabel">
     <mxGraphModel dx="906" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -161,7 +161,7 @@
           <mxGeometry x="30" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="kPnUgUAkOz-dqnrC_fEk-36" value="Data KK" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="280" y="40" width="200" height="460" as="geometry" />
+          <mxGeometry x="280" y="40" width="200" height="330" as="geometry" />
         </mxCell>
         <mxCell id="kPnUgUAkOz-dqnrC_fEk-37" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="kPnUgUAkOz-dqnrC_fEk-36" vertex="1">
           <mxGeometry y="30" width="200" height="30" as="geometry" />
@@ -364,6 +364,76 @@
         <mxCell id="UNnVfDy2UKLSpNP8gKaE-30" value="Nama Provinsi" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="UNnVfDy2UKLSpNP8gKaE-28">
           <mxGeometry x="30" width="170" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-1" value="User" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="400" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-2" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-1">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-3" value="PK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-2">
+          <mxGeometry width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-4" value="id user" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-2">
+          <mxGeometry x="30" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-5" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-1">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-6" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-5">
+          <mxGeometry width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-7" value="username" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-5">
+          <mxGeometry x="30" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-8" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-1">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-9" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-8">
+          <mxGeometry width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="WPm3aEkoXwCMXx121Ai5-10" value="jabatan" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="WPm3aEkoXwCMXx121Ai5-8">
+          <mxGeometry x="30" width="170" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="-yScQr9mH9I0Imxi3aeq" name="Diagram">
+    <mxGraphModel dx="906" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="fwETflIaLiQW5S1k3Qa1-0" />
+        <mxCell id="fwETflIaLiQW5S1k3Qa1-1" parent="fwETflIaLiQW5S1k3Qa1-0" />
+        <mxCell id="qeOYO8AVj0bislakt5Bk-0" value="Dashboard/&lt;br&gt;Beranda" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="40" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeOYO8AVj0bislakt5Bk-2" value="Input &lt;br&gt;Data Penduduk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="200" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeOYO8AVj0bislakt5Bk-3" value="List Data Penduduk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="200" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeOYO8AVj0bislakt5Bk-4" value="Cari Data Penduduk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="360" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeOYO8AVj0bislakt5Bk-5" value="Contact" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="520" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeOYO8AVj0bislakt5Bk-6" value="Data KTP" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="200" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeOYO8AVj0bislakt5Bk-7" value="Data KK" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="200" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qeOYO8AVj0bislakt5Bk-8" value="Profil Desa" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="fwETflIaLiQW5S1k3Qa1-1">
+          <mxGeometry x="40" y="160" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="lSpTFGzwBpnygwD0Icrw" name="Flowchart">
+    <mxGraphModel dx="906" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="ORiyj_UINUD6V3UiLP0o-0" />
+        <mxCell id="ORiyj_UINUD6V3UiLP0o-1" parent="ORiyj_UINUD6V3UiLP0o-0" />
       </root>
     </mxGraphModel>
   </diagram>
