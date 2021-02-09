@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kh1n8@tb+6zm_jzgp(a%)gn4xqr#$tj@qo^v+c&e8h#0@o0y4-'
+SECRET_KEY = 'o7)uhu0sgb!!qu$9g0u%i@*f-qp$8efr0(x)2at^x9bm+91(8&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -47,10 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'barang',
-    'kasir',
-    'supplier',
 ]
 
 ROOT_URLCONF = 'pos.urls'
@@ -58,9 +54,7 @@ ROOT_URLCONF = 'pos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR + '/templates',
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +118,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
