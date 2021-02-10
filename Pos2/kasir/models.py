@@ -11,8 +11,24 @@ class Barang(models.Model):
     harga_jual = models.DecimalField(max_digits=12, decimal_places=2)
     stok = models.DecimalField(max_digits=4, decimal_places=0)
     lokasi = models.CharField
-    
-# Data Stok
 
-# Data Supplier
+# Data Suplier
 
+class Suplier(models.Model):
+    id_suplier = models.CharField(max_length=255)
+    nama_suplier = models.CharField(max_length=255)
+    alamat = models.CharField(max_length=255)
+    no_tlp = models.CharField(max_length=255)
+    rek_bank = models.CharField(max_length=255)
+    pemilik_rek = models.CharField(max_length=255)
+
+# Data Customer
+
+class customer(models.Model):
+    id_cus = models.CharField(max_length=255)
+    nama_cus = models.CharField(max_length=255)
+    alamat = models.CharField(max_length=255)
+    no_tlp = models.CharField(max_length=255)
+    kota = models.CharField(max_length)
+
+# Data Transaksi
