@@ -11,7 +11,7 @@ class Barang(models.Model):
     harga_jual = models.DecimalField(max_digits=15, decimal_places=2)
     diskon = models.DecimalField(max_digits=15, decimal_places=0)
     stok = models.DecimalField(max_digits=5, decimal_places=0)
-    lokasi = models.CharField
+    lokasi = models.CharField(max_length=255)
 
 # Data Suplier
 
