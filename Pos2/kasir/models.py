@@ -30,7 +30,7 @@ class customer(models.Model):
     nama_cus = models.CharField(max_length=255)
     alamat = models.CharField(max_length=255)
     no_tlp = models.CharField(max_length=255)
-    kota = models.CharField(max_length)
+    kota = models.CharField(max_length=255)
 
 # Data Transaksi
 
