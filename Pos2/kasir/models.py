@@ -7,9 +7,10 @@ class Barang(models.Model):
     kategori = models.CharField(max_length=255)
     kode_barang = models.CharField(max_length=255)
     nama_barang = models.CharField(max_length=255)
-    harga_beli = models.DecimalField(max_digits=12, decimal_places=2)
-    harga_jual = models.DecimalField(max_digits=12, decimal_places=2)
-    stok = models.DecimalField(max_digits=4, decimal_places=0)
+    harga_beli = models.DecimalField(max_digits=15, decimal_places=2)
+    harga_jual = models.DecimalField(max_digits=15, decimal_places=2)
+    diskon = models.DecimalField(max_digits=15, decimal_places=0)
+    stok = models.DecimalField(max_digits=5, decimal_places=0)
     lokasi = models.CharField
 
 # Data Suplier
@@ -32,3 +33,11 @@ class customer(models.Model):
     kota = models.CharField(max_length)
 
 # Data Transaksi
+
+class Transaksi(models.Model):
+    no_nota = models.CharField(max_length=255)
+    date = models.TimeField()
+    qty = models.DecimalField(max_digits=5, decimal_places=0)
+    total = models.DecimalField(max_digits=5, decimal_places=0)
+    dp = models.DecimalField(max_digits=15, decimal_places=2)
+    sisa = models.DecimalField(max_digits=15, decimal_places=2)
