@@ -8,5 +8,6 @@ def index(rq):
     
 urlpatterns = [
     path('', index),
+    path('kasir/', include('kasir.urls')),
     path('admin/', admin.site.urls),
 ]
