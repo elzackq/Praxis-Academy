@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 
 from .models import Barang, Suplier, Customer, Transaksi
 
-# Data Barang
+
+# <--- Data Barang --->
 def h_screen(rq):
     barangs = Barang.objects.all()
     return render(rq, 'dbarang/barang.html',{
@@ -11,12 +12,24 @@ def h_screen(rq):
 
 def tambahbarang(rq):
     form = FormTambahBarang
-    return render(rq, 'dbarang/barang.html', {
+    return render(rq, 'dbarang/addbarang.html', {
         'form' : form,
     })
 
+def simpanbarang(rq):
+    if rq.POST:
+        form = FormTambahBarang()
+        if form.is_valid():
+            form.save()
+            return redirect('/dbarang')
+        #print(form.errors)
+    return redirect('/dbarang/addbarang')
 
-# Data Suplier
+def hapusbarang(rq, id):
+    Barang.objects.filter(id=id).delete()
+    return redirect('/dbarang')
+
+# <--- Data Suplier --->
 def sup_creen(rq):
     supliers = Suplier.objects.all()
     return render(rq, 'suplier/suplier.html',{
@@ -25,11 +38,25 @@ def sup_creen(rq):
 
 def tambahsuplier(rq):
     form = FormTambahSuplier
-    return render(rq, 'suplier/suplier.html', {
+    return render(rq, 'suplier/addsup.html', {
         'form' : form,
     })
 
-# Data Customer
+def simpansuplier(rq):
+    if rq.POST:
+        form = FormTambahSuplier()
+        if form.is_valid():
+            form.save()
+            return redirect('/suplier')
+        #(form.errors)
+    return redirect('/suplier/addsup')
+
+def hapussup(rq, id):
+    Suplier.objects.filter(id=id).delete()
+    return ('/suplier')
+
+
+# <--- Data Customer --->
 def cus_screen(rq):
     customrs = Customer.objects.all()
     return render(rq, 'dcustomer/customer.html',{
@@ -42,7 +69,8 @@ def tambahcuplier(rq):
         'form' : form,
     })
 
-# Data Transaksi
+
+# <--- Data Transaksi --->
 def tr_screen(rq):
     transk = Transaksi.objects.all()
     return render(rq, 'dtransaksi/trans.html',{
