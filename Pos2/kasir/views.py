@@ -63,23 +63,47 @@ def cus_screen(rq):
         'datumcus' : customrs,
     })
 
-def tambahcuplier(rq):
+def tambahcus(rq):
     form = FormTambahCust
     return render(rq, 'dcustomer/customer.html', {
         'form' : form,
     })
 
+def simpancus(rq):
+    if rq.POST:
+        form = FormTambahCust()
+        if form.is_valid():
+            form.save()
+            return redirect('/dcustomer')
+        #print(form.errors)
+    return redirect('/dcustomer/customer')
+    
+def hapuscus(rq, id):
+    Customer.objects.filter(id=id).delete()
+    return redirect('/dcustomer')
 
 # <--- Data Transaksi --->
 def tr_screen(rq):
-    transk = Transaksi.objects.all()
+    transk = TransaksiDetail.objects.all()
     return render(rq, 'dtransaksi/trans.html',{
         'datumtran' : transk,
     })
 
 def tambahcuplier(rq):
-    form = FormTambahCust
+    form = FormTambahTrans
     return render(rq, 'dtransaksi/trans.html', {
         'form' : form,
     })
-    
+
+def simpantrans(rq):
+    if rq.POST:
+        form = FormTambahTrans()
+        if form.is_valid():
+            form.save()
+            return redirect('/dtransaksi')
+        #print(form.erros)
+    return redirect('/dtransaksi/trans')
+
+def hapustrans(rq, id):
+    Transaksi.objects.filter(id=id).delete()
+    return redirect('/dtransaksi')
