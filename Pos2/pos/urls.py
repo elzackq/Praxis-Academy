@@ -13,5 +13,6 @@ urlpatterns = [
     path('', index),
     path('cont/', cont),
     path('kasir/', include('kasir.urls')),
+    path('dbarang/', include('kasir.urls')),
     path('admin/', admin.site.urls),
 ]

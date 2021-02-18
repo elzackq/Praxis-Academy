@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 
+from .forms import FormTambahBarang
 from .models import Barang, Suplier, Customer, Transaksi
+from . import forms
 
 
 # <--- Data Barang --->
@@ -10,20 +12,23 @@ def h_screen(rq):
         'datum': barangs,
     })
 
-def tambahbarang(rq):
-    form = FormTambahBarang
-    return render(rq, 'dbarang/addbarang.html', {
-        'form' : form,
-    })
+# def tambahbarang(rq):
+#     form = FormTambahBarang()
+#     return render(rq, 'dbarang/barang.html', {
+#         'form' : form,
+#     })
 
-def simpanbarang(rq):
+def simpan_barang(rq):
+    form = FormTambahBarang()
     if rq.POST:
-        form = FormTambahBarang()
+        form = FormTambahBarang(rq.POST)
         if form.is_valid():
             form.save()
             return redirect('/dbarang')
         #print(form.errors)
-    return redirect('/dbarang/addbarang')
+    return render(rq,'dbarang/barang.html',{
+        'form': form,
+    })
 
 def hapusbarang(rq, id):
     Barang.objects.filter(id=id).delete()
@@ -84,7 +89,7 @@ def hapuscus(rq, id):
 
 # <--- Data Transaksi --->
 def tr_screen(rq):
-    transk = TransaksiDetail.objects.all()
+    transk = Transaksi.objects.all()
     return render(rq, 'dtransaksi/trans.html',{
         'datumtran' : transk,
     })

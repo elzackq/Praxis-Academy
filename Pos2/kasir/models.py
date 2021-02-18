@@ -33,14 +33,13 @@ class Customer(models.Model):
     kota = models.CharField(max_length=255)
 
 # Data Transaksi
-class Transaksi
-
-class TransaksiDetail(models.Model):
+class Transaksi(models.Model):
     no_nota = models.CharField(max_length=10)
+    date = models.DateField()
+    time = models.TimeField()
     product = models.ForeignKey(Barang, on_delete=models.CASCADE, related_name='laku')
-    date = models.TimeField()
     qty = models.DecimalField(max_digits=5, decimal_places=0)
     jumlah = models.DecimalField(max_digits=15, decimal_places=2)
-    total = models.DecimalField(max_digits=15, decimal_places=2)
+    laba = models.DecimalField(max_digits=15, decimal_places=2)
     dp = models.DecimalField(max_digits=15, decimal_places=2)
     sisa = models.DecimalField(max_digits=12, decimal_places=2)
