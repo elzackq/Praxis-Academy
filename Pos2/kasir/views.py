@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .forms import FormTambahBarang
+from .forms import FormTambahBarang, FormTambahCust, FormTambahSuplier, FormTambahTrans
 from .models import Barang, Suplier, Customer, Transaksi
 from . import forms
 
@@ -26,7 +26,7 @@ def simpan_barang(rq):
             form.save()
             return redirect('/dbarang')
         #print(form.errors)
-    return render(rq,'dbarang/barang.html',{
+    return render(rq,'dbarang/addbarang.html',{
         'form': form,
     })
 
@@ -41,20 +41,23 @@ def sup_creen(rq):
         'datumsup' : supliers,
     })
 
-def tambahsuplier(rq):
-    form = FormTambahSuplier
-    return render(rq, 'suplier/addsup.html', {
-        'form' : form,
-    })
+# def tambahsuplier(rq):
+#     form = FormTambahSuplier
+#     return render(rq, 'suplier/addsup.html', {
+#         'form' : form,
+#     })
 
 def simpansuplier(rq):
+    form = FormTambahSuplier()
     if rq.POST:
-        form = FormTambahSuplier()
+        form = FormTambahSuplier(rq.POST)
         if form.is_valid():
             form.save()
             return redirect('/suplier')
         #(form.errors)
-    return redirect('/suplier/addsup')
+    return render(rq, 'suplier/addsupply.html',{
+        'form' : form,
+    })
 
 def hapussup(rq, id):
     Suplier.objects.filter(id=id).delete()
@@ -68,20 +71,23 @@ def cus_screen(rq):
         'datumcus' : customrs,
     })
 
-def tambahcus(rq):
-    form = FormTambahCust
-    return render(rq, 'dcustomer/customer.html', {
-        'form' : form,
-    })
+# def tambahcus(rq):
+#     form = FormTambahCust
+#     return render(rq, 'dcustomer/customer.html', {
+#         'form' : form,
+#     })
 
 def simpancus(rq):
+    form = FormTambahCust()
     if rq.POST:
-        form = FormTambahCust()
+        form = FormTambahCust(rq.POST)
         if form.is_valid():
             form.save()
             return redirect('/dcustomer')
         #print(form.errors)
-    return redirect('/dcustomer/customer')
+    return render(rq, 'dcustomer/addcus.html',{
+        'form': form,
+    })
     
 def hapuscus(rq, id):
     Customer.objects.filter(id=id).delete()
@@ -94,7 +100,7 @@ def tr_screen(rq):
         'datumtran' : transk,
     })
 
-def tambahcuplier(rq):
+def tambahtrans(rq):
     form = FormTambahTrans
     return render(rq, 'dtransaksi/trans.html', {
         'form' : form,

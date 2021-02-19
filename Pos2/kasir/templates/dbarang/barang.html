@@ -1,20 +1,55 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h1>Input Data Barang :</h1>
-<form action="" method="POST">
-    {% load crispy_forms_tags %}
-    {% csrf_token %}
-    {{ form|crispy }}
-    <br/>
-    <button type="submit" class="btn btn-primary">Simpan</button>
-</form>
+<div>
+  <div class="row">
+      <div class="col">
+          <a href="/">
+          <button class="btn btn-info">
+              Kembali
+          </button>
+          </a>
+      </div>
+      <div class="col-6 col-md-6 text-right">
+          <a href="/dbarang/input">
+              <button class="btn btn-success">
+                  Input Barang Baru
+              </button>
+          </a>
+      </div>    
+  </div>
+</div>    
+<br/>
+<h4>List Data Barang</h4>
+<div>
+  {% for data in datum %}
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Kode Barang</th>
+      <th scope="col">Nama barang</th>
+      <th scope="col">Harga Beli</th>
+      <th scope="col">Harga Jual</th>
+      <th scope="col">Diskon</th>
+      <th scope="col">Stok</th>
+      <th scope="col">Lokasi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ data.kode_barang }}</th>
+      <td>{{ data.nama_barang }}</td>
+      <td>{{ data.harga_beli }}</td>
+      <td>{{ data.harga_jual }}</td>
+      <td>{{ data.diskon }}</td>
+      <td>{{ data.stok }}</td>
+      <td>{{ data.lokasi }}</td>  
 
-<p>
-    {% for data in datum %}
-    {{ data.id }}
-    {{ data.nama_barang }}
+    </tr>
+  </tbody>
+</table>
     {% endfor %}
-</p>
+</div>
+
 
 {% endblock %}

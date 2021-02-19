@@ -14,18 +14,18 @@ class FormTambahBarang(forms.ModelForm):
 class FormTambahSuplier(forms.ModelForm):
     class Meta:
         exclude = []
-        model = Barang
+        model = Suplier
 
 # untuk form Customer
 
 class FormTambahCust(forms.ModelForm):
     class Meta:
         exclude = []
-        model = Barang
+        model = Customer
 
 # untuk form Transaksi
 
 class FormTambahTrans(forms.ModelForm):
     class Meta:
         exclude = []
-        model = Barang
+        model = Transaksi

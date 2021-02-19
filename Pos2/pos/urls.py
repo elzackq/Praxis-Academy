@@ -12,7 +12,14 @@ def cont(rq):
 urlpatterns = [
     path('', index),
     path('cont/', cont),
+    
     path('kasir/', include('kasir.urls')),
+    
     path('dbarang/', include('kasir.urls')),
+    
+    path('dcustomer/', include('kasir.urls')),
+    
+    path('suplier/', include('kasir.urls')),
+    
     path('admin/', admin.site.urls),
 ]

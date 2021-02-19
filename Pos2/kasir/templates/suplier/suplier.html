@@ -1,1 +1,53 @@
-<h1>data barang</h1>
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div>
+  <div class="row">
+      <div class="col">
+          <a href="/">
+          <button class="btn btn-info">
+              Kembali
+          </button>
+          </a>
+      </div>
+      <div class="col-6 col-md-6 text-right">
+          <a href="/suplier/inputsup">
+              <button class="btn btn-success">
+                  Input Data Supplier
+              </button>
+          </a>
+      </div>    
+  </div>
+</div>    
+<br/>
+<h4>List Data Supplier</h4>
+<div>
+  {% for data in datumsup %}
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No Supplier</th>
+      <th scope="col">Nama Supplier</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">No Telepon</th>
+      <th scope="col">No Rekening</th>
+      <th scope="col">Pemilik Rekening</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ data.id_suplier }}</th>
+      <td>{{ data.nama_suplier }}</td>
+      <td>{{ data.alamat }}</td>
+      <td>{{ data.no_tlp }}</td>
+      <td>{{ data.rek_bank }}</td>
+      <td>{{ data.pemilik_rek }}</td>
+    </tr>
+  </tbody>
+  
+</table>
+    {% endfor %}
+</div>
+
+{% endblock %}

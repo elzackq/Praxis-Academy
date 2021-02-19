@@ -2,9 +2,49 @@
 
 {% block content %}
 
-<p>
-    {% for data in datumcus %}
+<div>
+  <div class="row">
+      <div class="col">
+          <a href="/">
+          <button class="btn btn-info">
+              Kembali
+          </button>
+          </a>
+      </div>
+      <div class="col-6 col-md-6 text-right">
+          <a href="/dcustomer/inputcus">
+              <button class="btn btn-success">
+                  Input Pelanggan Baru
+              </button>
+          </a>
+      </div>    
+  </div>
+</div>    
+<br/>
+<h4>List Data Customer</h4>
+<div>
+  {% for data in datumcus %}
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No Pelanggan</th>
+      <th scope="col">Nama Pelanggan</th>
+      <th scope="col">Alamat</th>
+      <th scope="col">Kota</th>
+      <th scope="col">No Telepon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ data.id_cus }}</th>
+      <td>{{ data.nama_cus }}</td>
+      <td>{{ data.alamat }}</td>
+      <td>{{ data.kota }}</td>
+      <td>{{ data.no_tlp }}</td>
+    </tr>
+  </tbody>
+</table>
     {% endfor %}
-</p>
+</div>
 
 {% endblock %}
