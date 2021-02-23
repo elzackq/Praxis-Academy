@@ -23,7 +23,6 @@
 <br/>
 <h4>List Data Customer</h4>
 <div>
-  {% for data in datumcus %}
   <table class="table">
   <thead>
     <tr>
@@ -32,19 +31,28 @@
       <th scope="col">Alamat</th>
       <th scope="col">Kota</th>
       <th scope="col">No Telepon</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
+  {% for data in datumcus %}
     <tr>
       <th scope="row">{{ data.id_cus }}</th>
       <td>{{ data.nama_cus }}</td>
       <td>{{ data.alamat }}</td>
       <td>{{ data.kota }}</td>
       <td>{{ data.no_tlp }}</td>
+      <td>
+        <button type="button" class="btn btn-success btn-sm">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+      </td>
     </tr>
+    {% endfor %}
   </tbody>
 </table>
-    {% endfor %}
 </div>
 
 {% endblock %}

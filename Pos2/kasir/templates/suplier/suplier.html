@@ -23,7 +23,6 @@
 <br/>
 <h4>List Data Supplier</h4>
 <div>
-  {% for data in datumsup %}
   <table class="table">
   <thead>
     <tr>
@@ -33,9 +32,12 @@
       <th scope="col">No Telepon</th>
       <th scope="col">No Rekening</th>
       <th scope="col">Pemilik Rekening</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
+  {% for data in datumsup %}
     <tr>
       <th scope="row">{{ data.id_suplier }}</th>
       <td>{{ data.nama_suplier }}</td>
@@ -43,11 +45,17 @@
       <td>{{ data.no_tlp }}</td>
       <td>{{ data.rek_bank }}</td>
       <td>{{ data.pemilik_rek }}</td>
+      <td>
+        <button type="button" class="btn btn-success btn-sm">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+      </td>
     </tr>
+    {% endfor %}
   </tbody>
   
 </table>
-    {% endfor %}
 </div>
 
 {% endblock %}
