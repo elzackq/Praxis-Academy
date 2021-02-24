@@ -3,7 +3,7 @@ from django.db import models
 # Data Barang
 
 class Barang(models.Model):
-    kode = models.CharField(max_length=10)
+    kode = models.CharField(max_length=10, unique=True)
     kategori = models.CharField(max_length=255)
     kode_barang = models.CharField(max_length=255)
     nama_barang = models.CharField(max_length=255)
@@ -16,8 +16,9 @@ class Barang(models.Model):
 # Data Suplier
 
 class Suplier(models.Model):
-    id_suplier = models.CharField(max_length=10)
+    id_suplier = models.CharField(max_length=10, unique=True)
     nama_suplier = models.CharField(max_length=255)
+    produk = models.ForeignKey(Barang, on_delete=models.CASCADE, related_name='produk')
     alamat = models.CharField(max_length=255)
     no_tlp = models.CharField(max_length=255)
     rek_bank = models.CharField(max_length=255)
@@ -26,7 +27,7 @@ class Suplier(models.Model):
 # Data Customer
 
 class Customer(models.Model):
-    id_cus = models.CharField(max_length=10)
+    id_cus = models.CharField(max_length=10, unique=True)
     nama_cus = models.CharField(max_length=255)
     alamat = models.CharField(max_length=255)
     no_tlp = models.CharField(max_length=255)
@@ -34,7 +35,7 @@ class Customer(models.Model):
 
 # Data Transaksi
 class Transaksi(models.Model):
-    no_nota = models.CharField(max_length=10)
+    no_nota = models.CharField(max_length=10, unique=True)
     date = models.DateField()
     time = models.TimeField()
     product = models.ForeignKey(Barang, on_delete=models.CASCADE, related_name='laku')
