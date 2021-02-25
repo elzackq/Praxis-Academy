@@ -61,7 +61,7 @@ def simpansuplier(rq):
 
 def hapussup(rq, id):
     Suplier.objects.filter(id=id).delete()
-    return ('/kasir/suplier')
+    return redirect('/kasir/suplier')
 
 
 # <--- Data Customer --->
