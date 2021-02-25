@@ -15,11 +15,5 @@ urlpatterns = [
     
     path('kasir/', include('kasir.urls')),
     
-    path('barang/', include('kasir.urls')),
-    
-    path('customer/', include('kasir.urls')),
-    
-    path('suplier/', include('kasir.urls')),
-    
     path('admin/', admin.site.urls),
 ]

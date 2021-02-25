@@ -24,7 +24,7 @@ def simpan_barang(rq):
         form = FormTambahBarang(rq.POST)
         if form.is_valid():
             form.save()
-            return redirect('/barang')
+            return redirect('/kasir/barang')
         #print(form.errors)
     return render(rq,'barang/addbarang.html',{
         'form': form,
@@ -32,7 +32,7 @@ def simpan_barang(rq):
 
 def hapusbarang(rq, id):
     Barang.objects.filter(id=id).delete()
-    return redirect('/barang')
+    return redirect('/kasir/barang')
 
 # <--- Data Suplier --->
 def sup_creen(rq):
@@ -53,7 +53,7 @@ def simpansuplier(rq):
         form = FormTambahSuplier(rq.POST)
         if form.is_valid():
             form.save()
-            return redirect('/suplier')
+            return redirect('/kasir/suplier')
         #(form.errors)
     return render(rq, 'suplier/addsupply.html',{
         'form' : form,
@@ -61,13 +61,13 @@ def simpansuplier(rq):
 
 def hapussup(rq, id):
     Suplier.objects.filter(id=id).delete()
-    return ('/suplier')
+    return ('/kasir/suplier')
 
 
 # <--- Data Customer --->
 def cus_screen(rq):
     customrs = Customer.objects.all()
-    return render(rq, 'dcustomer/customer.html',{
+    return render(rq, 'customer/customer.html',{
         'datumcus' : customrs,
     })
 
@@ -83,7 +83,7 @@ def simpancus(rq):
         form = FormTambahCust(rq.POST)
         if form.is_valid():
             form.save()
-            return redirect('/dcustomer')
+            return redirect('/kasir/customer')
         #print(form.errors)
     return render(rq, 'customer/addcus.html',{
         'form': form,
@@ -91,7 +91,7 @@ def simpancus(rq):
     
 def hapuscus(rq, id):
     Customer.objects.filter(id=id).delete()
-    return redirect('/customer')
+    return redirect('/kasir/customer')
 
 # <--- Data Transaksi --->
 def tr_screen(rq):
