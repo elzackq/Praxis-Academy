@@ -8,7 +8,7 @@ from . import forms
 # <--- Data Barang --->
 def h_screen(rq):
     barangs = Barang.objects.all()
-    return render(rq, 'dbarang/barang.html',{
+    return render(rq, 'barang/barang.html',{
         'datum': barangs,
     })
 
@@ -24,15 +24,15 @@ def simpan_barang(rq):
         form = FormTambahBarang(rq.POST)
         if form.is_valid():
             form.save()
-            return redirect('/dbarang')
+            return redirect('/barang')
         #print(form.errors)
-    return render(rq,'dbarang/addbarang.html',{
+    return render(rq,'barang/addbarang.html',{
         'form': form,
     })
 
 def hapusbarang(rq, id):
     Barang.objects.filter(id=id).delete()
-    return redirect('/dbarang')
+    return redirect('/barang')
 
 # <--- Data Suplier --->
 def sup_creen(rq):
@@ -85,24 +85,24 @@ def simpancus(rq):
             form.save()
             return redirect('/dcustomer')
         #print(form.errors)
-    return render(rq, 'dcustomer/addcus.html',{
+    return render(rq, 'customer/addcus.html',{
         'form': form,
     })
     
 def hapuscus(rq, id):
     Customer.objects.filter(id=id).delete()
-    return redirect('/dcustomer')
+    return redirect('/customer')
 
 # <--- Data Transaksi --->
 def tr_screen(rq):
     transk = Transaksi.objects.all()
-    return render(rq, 'dtransaksi/trans.html',{
+    return render(rq, 'transaksi/trans.html',{
         'datumtran' : transk,
     })
 
 def tambahtrans(rq):
     form = FormTambahTrans
-    return render(rq, 'dtransaksi/trans.html', {
+    return render(rq, 'transaksi/trans.html', {
         'form' : form,
     })
 
@@ -111,10 +111,10 @@ def simpantrans(rq):
         form = FormTambahTrans()
         if form.is_valid():
             form.save()
-            return redirect('/dtransaksi')
+            return redirect('/transaksi')
         #print(form.erros)
-    return redirect('/dtransaksi/trans')
+    return redirect('/transaksi/trans')
 
 def hapustrans(rq, id):
     Transaksi.objects.filter(id=id).delete()
-    return redirect('/dtransaksi')
+    return redirect('/transaksi')

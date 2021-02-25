@@ -4,11 +4,11 @@ from . import views
 
 urlpatterns = [
   path('', views.h_screen),
-  path('dbarang/', views.h_screen),
+  path('barang/', views.h_screen),
   path('input/', views.simpan_barang),
   
   
-  path('dcustomer/', views.cus_screen),
+  path('customer/', views.cus_screen),
   path('inputcus/', views.simpancus),
 
   path('suplier/', views.sup_creen),

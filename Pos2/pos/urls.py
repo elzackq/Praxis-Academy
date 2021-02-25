@@ -15,9 +15,9 @@ urlpatterns = [
     
     path('kasir/', include('kasir.urls')),
     
-    path('dbarang/', include('kasir.urls')),
+    path('barang/', include('kasir.urls')),
     
-    path('dcustomer/', include('kasir.urls')),
+    path('customer/', include('kasir.urls')),
     
     path('suplier/', include('kasir.urls')),
     
