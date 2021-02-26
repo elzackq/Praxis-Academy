@@ -100,21 +100,24 @@ def tr_screen(rq):
         'datumtran' : transk,
     })
 
-def tambahtrans(rq):
-    form = FormTambahTrans
-    return render(rq, 'transaksi/trans.html', {
+# def tambahtrans(rq):
+#     form = FormTambahTrans
+#     return render(rq, 'transaksi/trans.html', {
+#         'form' : form,
+#     })
+
+def simpantrans(rq):
+    form = FormTambahTrans()
+    if rq.POST:
+        form = FormTambahTrans(rq.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/kasir/transaksi')
+        #print(form.erros)
+    return render(rq,'/transaksi/trans.html',{
         'form' : form,
     })
 
-def simpantrans(rq):
-    if rq.POST:
-        form = FormTambahTrans()
-        if form.is_valid():
-            form.save()
-            return redirect('/transaksi')
-        #print(form.erros)
-    return redirect('/transaksi/trans')
-
 def hapustrans(rq, id):
     Transaksi.objects.filter(id=id).delete()
-    return redirect('/transaksi')
+    return redirect('/kasir/transaksi')
